@@ -1,0 +1,8 @@
+.ReadMore {
+  &__content {
+    height: 90px;
+    overflow: hidden;
+
+    // @include multiLineEllipsis(1.2em, 3, #ffffff);
+  }
+}

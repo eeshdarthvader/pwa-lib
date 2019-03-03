@@ -1,0 +1,43 @@
+.Datalist {
+  background-color: #fff;
+  border-top: solid 1px #ddd;
+
+  &__item {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-bottom: solid 1px #eaeaea;
+    position: relative;
+
+    &:last-child {
+      border-bottom: solid 1px #ddd;
+    }
+
+    &.has-error {
+      background-color: lighten(#df3b2e, 40%);
+    }
+
+    &.selected {
+      background-color: #eee;
+    }
+
+    &.disabled {
+      opacity: 0.4;
+    }
+  }
+
+  html[dir='rtl'] &__arrow {
+    left: 16px;
+    right: unset;
+    transform: rotate(180deg);
+  }
+  &__arrow {
+    outline: 0;
+    width: 6px;
+    height: 10px;
+    fill: #d4d4d4;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -5px;
+  }
+}

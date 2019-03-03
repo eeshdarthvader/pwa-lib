@@ -1,0 +1,32 @@
+.flag {
+  display: flex;
+  align-items: center;
+
+  &--top {
+    align-items: flex-start;
+  }
+
+  &--bottom {
+    align-items: flex-end;
+  }
+}
+
+.flag__flex,
+.flag__fix {
+  display: initial;
+}
+
+.flag__flex {
+  min-width: 0;
+  flex: 1 1 auto;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-top: 0;
+  }
+}

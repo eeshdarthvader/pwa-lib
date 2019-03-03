@@ -1,0 +1,43 @@
+.Searchbar {
+  height: 46px;
+  position: relative;
+  background-color: #e6e6e8;
+  border-bottom: 1px solid #ddd;
+
+  &__icon {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    margin-left: 23px;
+    margin-top: 14px;
+  }
+
+  html[dir='rtl'] &__icon {
+    margin-left: inherit;
+    margin-right: 23px;
+  }
+
+  &__input {
+    @include placeholder {
+      @include font-smoothing;
+      color: #cbcbcb !important;
+      font-size: 15px;
+    }
+
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-left: 29px !important;
+    background-color: #fff !important;
+    border: none;
+    font-size: 15px;
+    width: calc(100% - 32px) !important;
+    height: 30px !important;
+    margin-top: 8px;
+    border-radius: 4px;
+  }
+
+  html[dir='rtl'] &__input {
+    padding-left: inherit !important;
+    padding-right: 29px !important;
+  }
+}

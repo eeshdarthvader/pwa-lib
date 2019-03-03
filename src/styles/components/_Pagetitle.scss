@@ -1,0 +1,46 @@
+.PageTitle {
+  height: 40px;
+  background: #f7f7f7;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+
+  &--summary {
+    height: 50px;
+  }
+
+  &__back {
+    position: absolute;
+    left: 13px; // To align it with the menu burger
+    padding-top: 14px;
+    width: 44px;
+    height: 44px;
+
+    svg {
+      fill: #36c;
+    }
+  }
+  html[dir='rtl'] &__back {
+    right: 13px;
+    text-align: left;
+    transform: rotate(180deg);
+  }
+
+  &__logo {
+    position: absolute;
+    left: 52px; // To align it with the menu burger
+    top: 50%;
+    margin-top: -13px;
+    fill: #36c;
+    width: 24px;
+    height: 24px;
+  }
+
+  html[dir='rtl'] &__logo {
+    right: 52px;
+  }
+}
+
+.PageTitle--dark {
+  background: #282828;
+}

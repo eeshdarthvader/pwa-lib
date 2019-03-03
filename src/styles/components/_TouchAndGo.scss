@@ -1,0 +1,84 @@
+.TouchAndGo {
+  background: #fff;
+  width: 100%;
+
+  &__group {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__field {
+    flex: 1;
+
+    // Floats the second input, if any, to the right
+    &:nth-of-type(2) {
+      text-align: right;
+    }
+    html[dir='rtl'] &:nth-of-type(2) {
+      text-align: left;
+    }
+  }
+
+  &__switch {
+    padding: 11px;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -9px; // -22 + 13 where 13 to add margin top after centering
+    margin-left: -22px;
+    z-index: 1;
+  }
+
+  &__label.has-error {
+    color: #df3b2e !important;
+  }
+}
+
+.TouchAndGo__tappable {
+  height: 80px;
+  // background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.TouchAndGo__tappable--left {
+  @extend .TouchAndGo__tappable;
+  margin-left: -16px;
+  padding-left: 16px;
+}
+
+.TouchAndGo__tappable--right {
+  @extend .TouchAndGo__tappable;
+  margin-right: -16px;
+  padding-right: 16px;
+}
+
+.TouchAndGo__tappable--large-left {
+  @extend .TouchAndGo__tappable;
+  @extend .TouchAndGo__tappable--left;
+  height: 102px;
+}
+
+.TouchAndGo__tappable--large-right {
+  @extend .TouchAndGo__tappable;
+  @extend .TouchAndGo__tappable--right;
+  height: 102px;
+}
+
+.TouchAndGo__tappable--row {
+  @extend .TouchAndGo__tappable;
+  @extend .TouchAndGo__tappable--right;
+  @extend .TouchAndGo__tappable--left;
+}
+
+.TouchAndGo__tappable--row-large {
+  @extend .TouchAndGo__tappable;
+  @extend .TouchAndGo__tappable--right;
+  @extend .TouchAndGo__tappable--left;
+  height: 102px;
+}

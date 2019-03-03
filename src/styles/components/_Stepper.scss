@@ -1,0 +1,57 @@
+.Stepper {
+  display: flex;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18px;
+    width: 18px;
+    background-color: #697284;
+    border-radius: 40px;
+    position: relative;
+    margin-left: 24px;
+
+    &::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      position: absolute;
+      left: -24px;
+      top: 8px;
+      background-color: #697284;
+    }
+
+    &:first-child {
+      margin-left: 0;
+      &::before {
+        content: none;
+      }
+      html[dir='rtl'] &::before {
+        content: '';
+      }
+    }
+    html[dir='rtl'] &:last-child {
+      margin-left: 0;
+      &::before {
+        content: none;
+      }
+    }
+    html[dir='rtl'] &:first-child {
+      margin-left: 24px;
+    }
+
+    &--active {
+      background-color: #36c;
+      &::before {
+        background-color: #36c;
+      }
+    }
+  }
+
+  &__count {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 500;
+  }
+}

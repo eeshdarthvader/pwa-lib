@@ -1,0 +1,20 @@
+.baggageLeg {
+  min-width: 160px;
+  max-width: 160px;
+  &__info {
+    white-space: initial;
+  }
+  &:not(:last-child) {
+    border-right: 1px dashed #ddd;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+  html[dir='rtl'] &:not(:last-child) {
+    border-right: inherit;
+    padding-right: inherit;
+    margin-right: inherit;
+    border-left: 1px dashed #ddd;
+    padding-left: 10px;
+    margin-left: 10px;
+  }
+}

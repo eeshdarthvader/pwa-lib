@@ -1,0 +1,54 @@
+.Modal {
+  width: 90%;
+  background-color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  overflow: hidden;
+
+  &__content {
+    padding: 30px 16px;
+  }
+
+  &__heading {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__subheading {
+    font-size: 15px;
+    color: rgba(0, 0, 0, .7);
+    line-height: 1.4;
+    margin-top: -5px;
+    margin-bottom: 0;
+  }
+
+  &__copy {
+    font-size: 14px;
+    color: rgba(0, 0, 0, .7);
+    line-height: 1.4;
+  }
+
+  &__actions {
+    display: flex;
+  }
+
+  &__action {
+    flex: 1;
+    display: block;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, .6);
+    border-top: solid 1px #eee;
+
+    &--primary {
+      color: #36c;
+    }
+
+    &:not(first-child) {
+      border-left: solid 1px #eee;
+    }
+  }
+
+}

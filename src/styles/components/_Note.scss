@@ -1,0 +1,10 @@
+.Note {
+  border: 1px solid #ddd;
+  &__head {
+    top: -10px;
+    background-color: #efeff5;
+  }
+  &__icon {
+    vertical-align: text-top;
+  }
+}

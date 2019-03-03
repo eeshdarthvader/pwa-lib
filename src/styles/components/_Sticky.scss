@@ -1,0 +1,21 @@
+.Sticky {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  visibility: visible;
+  display: block;
+
+  &--top {
+    top: 0;
+  }
+
+  &--bottom {
+    bottom: 0;
+    background-color: #efeff4;
+  }
+  &__fake {
+    opacity: 0;
+    z-index: -1;
+  }
+}

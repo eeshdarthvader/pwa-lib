@@ -1,0 +1,58 @@
+%baseButton {
+  outline: 0;
+  border: 0;
+  border-radius: 4px;
+  display: inline-block;
+  appearance: button;
+
+  -webkit-appearance: button; /* for input */
+  -webkit-user-select: none; /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.Fab {
+  @extend %baseButton;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 5;
+  background-color: #333;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  height: 48px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__icon {
+    fill: #fff;
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    &--active {
+      position: absolute;
+      top: -10px;
+      right: 24px;
+      background-color: white;
+      border: 1px solid;
+      border-radius: 50%;
+    }
+    html[dir='rtl'] &--active {
+      right: unset;
+      left: 8px;
+    }
+  }
+}
+
+.Fab-default {
+  position: initial;
+  justify-content: space-between;
+}
+
+html[dir='rtl'] .Fab {
+  right: unset;
+  left: 16px;
+}

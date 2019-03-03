@@ -1,0 +1,63 @@
+.Sheet {
+  @include coverer();
+  z-index: 20;
+  background-color: #efeff4;
+  overflow: auto;
+
+  &__closeAction{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__content {
+    z-index: 21;
+    // position: fixed;
+    width: 100%;
+    height: calc(100% - 45px);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &__header {
+    background: #595858;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  &__title {
+    @include font-smoothing();
+    font-size: 16px;
+    color: #fff;
+  }
+
+  &__close {
+    position: absolute;
+    left: 16px;
+  }
+  html[dir='rtl'] &__close {
+    position: absolute;
+    right: 16px;
+  }
+
+  &__secondaryAction {
+    opacity: 0.7;
+    position: absolute;
+    right: 16px;
+    color: white;
+    font-size: 14px;
+  }
+  html[dir='rtl'] &__secondaryAction {
+    position: absolute;
+    right: unset;
+    left: 16px;
+  }
+
+  &--open {
+    position: relative;
+    overflow: hidden;
+  }
+}

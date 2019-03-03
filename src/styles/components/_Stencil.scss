@@ -1,0 +1,48 @@
+.Stencil {
+  background: #efefef;
+  display: inline-block;
+
+  &.has-shimmer {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background: linear-gradient(135deg, #efefef 8%, #ddd 18%, #efefef 33%);
+    background-size: 800px 120px;
+    position: relative;
+  }
+
+  &.is-rounded {
+    border-radius: 3px;
+  }
+
+  &.is-circular {
+    border-radius: 200px;
+  }
+
+  &.is-dark {
+    background: #484848;
+  }
+
+}
+
+.Stencil.is-dark.has-shimmer {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: linear-gradient(135deg, #484848 8%, #555 18%, #484848 33%);
+  background-size: 800px 104px;
+  position: relative;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}

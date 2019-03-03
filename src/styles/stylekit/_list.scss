@@ -1,0 +1,102 @@
+.list {
+  &--inline {
+    display: flex;
+
+    li { list-style-type: none; }
+  }
+
+  &--separated {
+    li:not(:first-child) {
+      margin-left: 10px;
+
+      &::before {
+        content: "·";
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &--spaced {
+    li:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  &--ordered {
+    list-style-type: none;
+    counter-reset: listcounter;
+
+    li {
+      position: relative;
+      padding-left: 32px;
+      line-height: 1.4;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    li::before {
+      counter-increment: listcounter;  /* Increment the value of listcounter counter by 1 */
+      content: counter(listcounter);
+      color: #fff;
+      margin-right: 4px;
+      position: absolute;
+      left: 0;
+      font-size: 13px;
+      background-color: #19a974;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+  }
+
+  &--loading {
+    li::before {
+      counter-increment: listcounter;  /* Increment the value of listcounter counter by 1 */
+      content: counter(listcounter);
+      color: #fff;
+      margin-right: 4px;
+      position: absolute;
+      left: 0;
+      font-size: 13px;
+      background-color: #e0e0e0;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+  }
+}
+
+
+.lists {
+  display: flex;
+  flex-direction: column;
+
+  li {
+    padding-left: 20px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: #df3b2e;
+      border-radius: 50% 50%;
+      position: absolute;
+      top: 14px;
+      left: 8px;
+    }
+  }
+}

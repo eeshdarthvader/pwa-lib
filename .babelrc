@@ -1,0 +1,9 @@
+{
+  "presets": ["react-app", "stage-1"],
+  "plugins": [
+    "transform-class-properties",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-transform-named-capturing-groups-regex"
+  ]
+}

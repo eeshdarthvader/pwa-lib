@@ -1,0 +1,38 @@
+.Toast {
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  background-color: #282828;
+  position: fixed;
+  bottom: 10px;
+  border-radius: 3px;
+  padding: 5px 0;
+  box-sizing: content-box;
+  z-index: 21;
+  display: flex;
+  align-items: center;
+
+
+  &__body {
+    flex: 1;
+    p {
+      font-size: 13px;
+      line-height: 1.2;
+      color: #d7d7d7;
+    }
+  }
+
+  &__icon {
+    width: 44px;
+    fill: #ece25e;
+  }
+
+  &__closeLink {
+    text-align: center;
+    padding: 12px;
+  }
+
+  &__close {
+    fill: rgba(255, 255, 255, .6);
+  }
+}

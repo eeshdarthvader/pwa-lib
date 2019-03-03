@@ -1,0 +1,378 @@
+@import "base/reset";
+@import "base/colors";
+@import "helpers/mixin";
+@import "components/Animate";
+@import "components/Badge";
+@import "components/Header";
+@import "components/List";
+@import "components/Sheet";
+@import "components/Pagetitle";
+@import "components/Tabs";
+@import "components/Button";
+@import "components/FilterWrapper";
+@import "components/Fab";
+@import "components/Alert";
+@import "components/Stencil";
+@import "components/Counter";
+@import "components/Sortbar";
+@import "components/Pageloader";
+@import "components/SectionDivider";
+@import "components/Toast";
+@import "components/TouchAndGo";
+@import "components/LowSeat";
+@import "components/Stepper";
+@import "components/Overlay";
+@import "components/Modal";
+@import "components/Note";
+@import "components/Baggage";
+@import "components/Sticky";
+@import "components/ReadMore";
+@import "components/LightBox";
+@import "components/Searchbar";
+@import "components/Gallery";
+@import "components/Swiper";
+@import "components/SummaryHeader";
+@import "components/Deal";
+@import "stylekit/flag";
+@import "stylekit/list";
+@import "stylekit/flex";
+@import "stylekit/dimensions";
+@import "stylekit/spacing";
+@import "stylekit/typography";
+@import "stylekit/utils";
+
+* {
+  box-sizing: border-box;
+  // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+:not(input):not(textarea):not(button) {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", "Ubuntu", "Arial", sans-serif;
+  background-color: #efeff4;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  font-feature-settings: "liga" on;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  border-radius: 0;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
+// HACK:
+// Change this to a utility class,
+// derive width from classname
+// e.g- .flex-fix-120
+.flex-fix {
+  min-width: 120px; // Needed for the longest label
+}
+
+.input--select,
+.input--text {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  line-height: 1.5;
+  outline: 0;
+  border: 0;
+  background: transparent;
+}
+
+.input--masked {
+  text-security: disc;
+  -webkit-text-security: disc;
+}
+
+// Temporarily at the bottom to maintain the cascade
+@import "components/Autocomplete";
+
+.BankList {
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__item {
+    // HACK: 8px is 16/2. 16px being the space between tabs
+    width: calc(50% - 8px);
+    border: solid 1px #eaeaea;
+    border-radius: 3px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-bottom: 16px;
+  }
+}
+
+.divider {
+  position: relative;
+  &__line {
+    background-color: #e2e2e2;
+    height: 1px;
+  }
+
+  &__svg-cont {
+    @include centerer();
+    background-color: #efeff4;
+    position: absolute;
+    padding: 0 16px;
+  }
+
+  &__svg {
+    fill: #717171;
+  }
+}
+
+.Scrollable {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+// Hack to fix fonts for 320px screen
+@media only screen and (min-width: 1px) and (max-width: 321px) {
+  time.fs-14.d-ib.mb-2 {
+    font-size: 11px !important;
+  }
+
+  p.fs-12.mt-5.c-black-40 {
+    font-size: 10px !important;
+  }
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #acacac 10%, transparent 1.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
+  }
+
+  &:active::after {
+    transform: scale(0, 0);
+    opacity: 0.2;
+    transition: 0s;
+  }
+}
+
+.Timeline {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
+    width: 2px;
+    background: #36c;
+  }
+
+  html[dir="rtl"] &::before {
+    left: inherit;
+    right: 18px;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__node {
+    left: 10px;
+    position: absolute;
+    z-index: 2;
+
+    svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  html[dir="rtl"] &__node {
+    left: inherit;
+    right: 10px;
+  }
+
+  &__event {
+    margin-left: 30px;
+    text-align: left;
+  }
+
+  html[dir="rtl"] &__event {
+    margin-left: inherit;
+    margin-right: 30px;
+    text-align: right;
+  }
+}
+
+// .Searchbar {
+//   height: 46px;
+//   position: relative;
+//   background-color: #efeff4;
+
+//   &__icon {
+//     position: absolute;
+//     width: 14px;
+//     height: 14px;
+//     margin-left: 23px;
+//     margin-top: 14px;
+//   }
+
+//   &__input {
+//     @include placeholder {
+//       @include font-smoothing;
+//       color: #cbcbcb;
+//       font-size: 15px;
+//     }
+
+//     margin-left: 16px;
+//     margin-right: 16px;
+//     padding-left: 29px;
+//     background-color: #fff;
+//     border: none;
+//     font-size: 15px;
+//     width: calc(100% - 32px);
+//     height: 30px;
+//     margin-top: 8px;
+//     border-radius: 4px;
+//   }
+// }
+
+.Localilty {
+  height: 46px;
+}
+
+.Progress {
+  &__container {
+    width: 100%;
+    background-color: #eaeaea;
+    height: 5px;
+    border-radius: 8px;
+    position: relative;
+  }
+  &__bar {
+    width: 80%;
+    background-color: #599347;
+    height: 5px;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.input-range__slider {
+  background-color: #fff !important;
+  border-color: #36c !important;
+  box-shadow: -1px 2px 2px rgba(68, 68, 68, 0.6);
+  height: 20px !important;
+  width: 20px !important;
+  margin-top: -12px !important;
+}
+
+.input-range__track--active {
+  background: #36c !important;
+}
+
+br {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+b {
+  font-weight: 600;
+  color: #333333;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.ItineraryHeader {
+  position: relative;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+
+  &__overlay {
+    background-color: #000;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  }
+
+  &__content {
+    z-index: 0;
+    position: relative;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__name {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  &__area {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 10px 0;
+  }
+}

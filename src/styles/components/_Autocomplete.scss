@@ -1,0 +1,22 @@
+.Autocomplete {
+  &__search {
+    @include placeholder {
+      @include font-smoothing;
+      color: #cbcbcb;
+      font-size: 16px;
+    }
+
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #fff;
+    border-bottom: solid 1px #ddd;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+.ClearButton {
+  position: absolute;
+  right: 25px;
+  top: 60px;
+}
