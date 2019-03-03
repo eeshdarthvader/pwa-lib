@@ -11,7 +11,7 @@ module.exports = {
     extensions: [".mjs", ".web.js", ".js", ".json", ".web.jsx", ".jsx"],
     modules: [paths.appSrc, "node_modules"],
     alias: {
-      Lib: path.resolve(paths.appSrc, "/lib")
+      Lib: path.resolve(paths.appSrc, "lib/")
     }
   },
   module: {
