@@ -1,24 +1,24 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
 
-import Ripple from 'Lib/Animate/Ripple/'
+import Ripple from "Lib/Animate/Ripple/";
 
 class Button extends PureComponent {
   _handleClick = event => {
-    event.preventDefault()
-    this.props.onClick(event)
-  }
+    event.preventDefault();
+    this.props.onClick(event);
+  };
   render() {
     const btnClass = classnames(
-      'Button',
+      "Button",
       this.props.className,
       `Button--${this.props.size}`,
       `Button--${this.props.type}`,
       {
-        'is-disabled': this.props.disabled === true
+        "is-disabled": this.props.disabled === true
       }
-    )
+    );
 
     return (
       <Ripple enableRipple={!this.props.disabled && this.props.enableRipple}>
@@ -32,10 +32,10 @@ class Button extends PureComponent {
               {this.props.children}
               {RippleContent}
             </button>
-          )
+          );
         }}
       </Ripple>
-    )
+    );
   }
 }
 
@@ -51,11 +51,11 @@ Button.propTypes = {
   /**
    * Specifies size of the Button.
    */
-  size: PropTypes.oneOf(['small', 'full', 'medium', 'large', 'inline']),
+  size: PropTypes.oneOf(["small", "full", "medium", "large", "inline"]),
   /**
    * Specifies type of the Button.
    */
-  type: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  type: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
   /**
    * Specifies classnames for the Button.
    */
@@ -68,16 +68,16 @@ Button.propTypes = {
    * Specifies whether to enable the ripple effect for Button.
    */
   enableRipple: PropTypes.bool
-}
+};
 
 Button.defaultProps = {
   disabled: false,
-  children: 'Button',
-  size: 'full',
-  type: 'primary',
-  className: '',
+  children: "Button",
+  size: "full",
+  type: "primary",
+  className: "",
   onClick: () => {},
   enableRipple: true
-}
+};
 
-export default Button
+export default Button;
