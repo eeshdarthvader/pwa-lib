@@ -94,7 +94,8 @@
     "start": "node scripts/start.js",
     "build": "NODE_ENV=production webpack --mode production",
     "test": "node scripts/test.js",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook"
   },
   "eslintConfig": {
     "extends": "react-app",
