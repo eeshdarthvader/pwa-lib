@@ -1,7 +1,6 @@
 import React from "react";
 import { addParameters, configure, addDecorator } from "@storybook/react";
-import { themes } from "@storybook/theming";
-import { setOptions } from "@storybook/addon-options";
+import theme from "./cleartripTheme";
 import { withKnobs } from "@storybook/addon-knobs";
 import {
   withViewport,
@@ -9,14 +8,15 @@ import {
   INITIAL_VIEWPORTS
 } from "@storybook/addon-viewport";
 
-setOptions({
-  name: "PWA LIBRARY",
-  url: "https://github.com/airbnb/react-dates",
-  addonPanelInRight: false
-});
-
 addDecorator(withKnobs);
 addDecorator(withViewport("iphone6"));
+
+addParameters({
+  options: {
+    theme: theme,
+    name: "PWA LIBRARY"
+  }
+});
 
 const req = require.context("../src", true, /\.stories\.js$/);
 

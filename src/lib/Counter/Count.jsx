@@ -1,34 +1,34 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-import { ListItem } from 'Lib/List'
+import { ListItem } from "Lib/List";
 
-import Subtract from './icons/subtract.svg'
-import Add from './icons/add.svg'
+import { ReactComponent as Subtract } from "./icons/subtract.svg";
+import { ReactComponent as Add } from "./icons/add.svg";
 
 class Count extends PureComponent {
   _decrementValue = () => {
-    this.props.onDecrement(this.props.id, this.props.minValue)
-  }
+    this.props.onDecrement(this.props.id, this.props.minValue);
+  };
 
   _incrementValue = () => {
-    this.props.onIncrement(this.props.id)
-  }
+    this.props.onIncrement(this.props.id);
+  };
 
   render() {
-    const { totalValue, maxValue, minValue, value } = this.props
-    const disableIncrement = totalValue === maxValue
-    const disableDecrement = totalValue === minValue || value === minValue
+    const { totalValue, maxValue, minValue, value } = this.props;
+    const disableIncrement = totalValue === maxValue;
+    const disableDecrement = totalValue === minValue || value === minValue;
     const getClassNames = flag => {
       return classNames({
         Counter__disabled: flag
-      })
-    }
+      });
+    };
     return (
       <ListItem
         className={classNames(
-          'Counter__item h-56 flex flex-middle flex-between',
+          "Counter__item h-56 flex flex-middle flex-between",
           this.props.className
         )}
       >
@@ -49,7 +49,7 @@ class Count extends PureComponent {
           />
         </div>
       </ListItem>
-    )
+    );
   }
 }
 
@@ -78,15 +78,15 @@ Count.propTypes = {
    */
   onDecrement: PropTypes.func, // (id)
   minValue: PropTypes.number
-}
+};
 
 Count.defaultProps = {
-  id: '',
-  className: '',
+  id: "",
+  className: "",
   value: 0,
   children: () => {},
   totalValue: 0,
   minValue: 0
-}
+};
 
-export default Count
+export default Count;
