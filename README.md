@@ -1,9 +1,4 @@
-<p align="center">
-  <img src="https://res.cloudinary.com/cleartrip/image/upload/h_100/v1551791273/PWALibrary_dchini.png" >
-</p>
-<h3 align="center">
-  PWA LIBRARY
-</h3>
+![picture](https://res.cloudinary.com/cleartrip/image/upload/h_100/v1551791273/PWALibrary_dchini.png)
 
 # Mobile Web React Component Library
 
@@ -108,4 +103,4 @@ yarn start
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License.
