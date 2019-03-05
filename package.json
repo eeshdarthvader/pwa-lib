@@ -4,6 +4,10 @@
   "main": "dist/bundled.js",
   "author": "Eesh Tyagi",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eeshdarthvader/pwa-lib.git"
+  },
   "dependencies": {
     "@babel/core": "7.2.2",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
