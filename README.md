@@ -13,33 +13,33 @@ After creation, your project should look like this:
 ```
 PWA-LIB/
   .storybook
-		yourTheme.js
-		config.js
-		storybook.scss
-		webpack.config.js
+     yourTheme.js
+     config.js
+     storybook.scss
+     webpack.config.js
   README.md
   node_modules/
   package.json
   dist/
-		bundled.js
+     bundled.js
   config/
   public/
     index.html
   src/
     lib/
       Buttons
-				Button.stories.js
-				index.jsx
-				Button.jsx
-			Badges
-			Counter
-			Divider
-			Form
-			Modal
-			Pageloader
-			Radio
-			Sticky
-			Ripple
+	Button.stories.js
+	index.jsx
+	Button.jsx
+      Badges
+      Counter
+      Divider
+      Form
+      Modal
+      Pageloader
+      Radio
+      Sticky
+      Ripple
     constants/
     styles/
       components/
@@ -50,7 +50,7 @@ PWA-LIB/
   .babelrc
   .gitignore
   yarn.lock
-	paths.js
+  paths.js
 
 
 ```
