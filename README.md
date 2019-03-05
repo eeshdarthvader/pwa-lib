@@ -12,7 +12,7 @@ Simple React App for Reusable React Components in mobile Web Application (PWA)
 
 To use this as component Library in other projects
 
-```
+```javascript
 yarn add pwa-lib
 ```
 
