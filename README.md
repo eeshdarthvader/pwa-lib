@@ -1,68 +1,111 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="https://res.cloudinary.com/cleartrip/image/upload/h_100/v1551791273/PWALibrary_dchini.png" >
+</p>
+<h3 align="center">
+  PWA LIBRARY
+</h3>
+
+# Mobile Web React Component Library
+
+Simple React App for Reusable React Components in mobile Web Application (PWA)
+
+## Folder Structure
+
+After creation, your project should look like this:
+
+```
+PWA-LIB/
+  .storybook
+		yourTheme.js
+		config.js
+		storybook.scss
+		webpack.config.js
+  README.md
+  node_modules/
+  package.json
+  dist/
+		bundled.js
+  config/
+  public/
+    index.html
+  src/
+    lib/
+      Buttons
+				Button.stories.js
+				index.jsx
+				Button.jsx
+			Badges
+			Counter
+			Divider
+			Form
+			Modal
+			Pageloader
+			Radio
+			Sticky
+			Ripple
+    constants/
+    styles/
+      components/
+      app.scss
+    utils/
+    app.js
+    index.js
+  .babelrc
+  .gitignore
+  yarn.lock
+	paths.js
+
+
+```
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
+### `yarn build`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
+Builds the app for production to the `dist` folder.<br>
+Entry point is `/src/lib/index.js`
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+<br>
+Your app is ready to be published to npm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `yarn storybook`
 
-### `npm run eject`
+Runs the storybook to tests all the React component in isolation.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prerequisites
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+node
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Installing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Install dependencies
 
-## Learn More
+```
+yarn install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Start the development Server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+yarn start
+```
 
-### Code Splitting
+## Authors
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- **Eesh Tyagi**
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
