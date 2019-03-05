@@ -1,9 +1,6 @@
 <p align="center">
   <img src="https://res.cloudinary.com/cleartrip/image/upload/h_100/v1551791273/PWALibrary_dchini.png" >
 </p>
-<h3 align="center">
-  PWA LIBRARY
-</h3>
 
 # Mobile Web React Component Library
 
