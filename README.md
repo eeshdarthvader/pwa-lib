@@ -6,6 +6,40 @@
 
 Simple React App for Reusable React Components in mobile Web Application (PWA)
 
+
+```
+https://www.npmjs.com/package/pwa-lib
+```
+
+To use this as component Library in other projects
+
+```
+yarn add pwa-lib
+```
+
+In your App
+
+```javascript
+import React from "react";
+import ReactDOM from "react-dom";
+import { Button, CodeBadge } from "pwa-lib";
+
+import "./styles.css";
+
+function App() {
+  return (
+    <div className="App">
+      <Button>Push Me</Button>
+      <CodeBadge label="eesh" size="small" />
+    </div>
+  );
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+
+```
+
 ## Folder Structure
 
 After creation, your project should look like this:
