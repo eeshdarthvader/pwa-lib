@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://res.cloudinary.com/cleartrip/image/upload/h_100/v1551791273/PWALibrary_dchini.png" >
-</p>
+![picture](https://res.cloudinary.com/cleartrip/image/upload/h_100/v1551791273/PWALibrary_dchini.png)
 
 # Mobile Web React Component Library
 
