@@ -1,6 +1,6 @@
 {
   "name": "pwa-lib",
-  "version": "0.2.4",
+  "version": "0.2.6",
   "main": "dist/bundled.js",
   "author": "Eesh Tyagi",
   "license": "MIT",
@@ -41,6 +41,7 @@
     "css-loader": "^2.1.0",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
+    "element-class": "^0.2.2",
     "emotion-theming": "^10.0.7",
     "eslint": "5.12.0",
     "eslint-config-react-app": "^3.0.7",
