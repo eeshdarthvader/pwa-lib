@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import React from "react";
+import PropTypes from "prop-types";
+import classnames from "classnames";
 
-import SetInnerHTML from 'Lib/SetInnerHTML'
-import DealIcon from './icons/deal.svg'
+import SetInnerHTML from "Lib/SetInnerHTML";
+import { ReactComponent as DealIcon } from "./icons/deal.svg";
 
 const Deal = props => {
   return (
     <div
-      className={classnames('Deal pl-16 pr-16', props.className)}
+      className={classnames("Deal pl-16 pr-16", props.className)}
       onClick={props.onClick}
     >
       <div className="Deal__logo">
@@ -16,21 +16,21 @@ const Deal = props => {
       </div>
       <SetInnerHTML className="Deal__copy" innerHTML={props.message} />
     </div>
-  )
-}
+  );
+};
 
-Deal.displayName = 'Deal'
+Deal.displayName = "Deal";
 
 Deal.propTypes = {
   className: PropTypes.string,
   message: PropTypes.string,
   onClick: PropTypes.func
-}
+};
 
 Deal.defaultProps = {
-  className: '',
-  message: '',
+  className: "",
+  message: "",
   onClick: () => {}
-}
+};
 
-export default Deal
+export default Deal;

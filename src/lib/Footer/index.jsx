@@ -1,14 +1,14 @@
 /* eslint jsx-a11y/href-no-hash: 0 */
 // ^ Turn this off after hooking up data
 
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
 
-import SafeIcon from './icons/secure.svg'
+import { ReactComponent as SafeIcon } from "./icons/secure.svg";
 
 class Footer extends PureComponent {
   render() {
-    const currentYear = new Date().getFullYear()
+    const currentYear = new Date().getFullYear();
     return (
       <footer className="footer mt-20 mb-15">
         <section className="footer__account centered mb-10">
@@ -64,7 +64,7 @@ class Footer extends PureComponent {
           </p>
         </div>
       </footer>
-    )
+    );
   }
 }
 
@@ -79,19 +79,19 @@ Footer.propTypes = {
   textTermsOfUse: PropTypes.string,
   textSignIn: PropTypes.string,
   textSignOut: PropTypes.string
-}
+};
 
 Footer.defaultProps = {
   loginId: null,
   signOutUser: () => {},
   handleSignIn: () => {},
   loginEnabled: true,
-  textCompanyName: 'Cleartrip Private Limited',
-  textSecuredTransaction: 'Completely safe and secure transaction',
-  textPrivacyPolicy: 'Privacy Policy',
-  textTermsOfUse: 'Terms of use',
-  textSignIn: 'Sign In',
-  textSignOut: 'Sign Out'
-}
+  textCompanyName: "Cleartrip Private Limited",
+  textSecuredTransaction: "Completely safe and secure transaction",
+  textPrivacyPolicy: "Privacy Policy",
+  textTermsOfUse: "Terms of use",
+  textSignIn: "Sign In",
+  textSignOut: "Sign Out"
+};
 
-export default Footer
+export default Footer;

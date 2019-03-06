@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-import Ripple from 'Lib/Animate/Ripple/'
-import Arrow from './rightarr.svg'
+import { ReactComponent as Ripple } from "Lib/Animate/Ripple/";
+import { ReactComponent as Arrow } from "./rightarr.svg";
 
 class ListItem extends PureComponent {
   render() {
@@ -15,7 +15,7 @@ class ListItem extends PureComponent {
               style={this.props.style}
               role="menuitem"
               className={classNames(`Datalist__item ${this.props.className}`, {
-                'has-error': this.props.hasError
+                "has-error": this.props.hasError
               })}
               onClick={this.props.onClick}
               {...rippleProps}
@@ -26,10 +26,10 @@ class ListItem extends PureComponent {
               </If>
               {RippleContent}
             </li>
-          )
+          );
         }}
       </Ripple>
-    )
+    );
   }
 }
 
@@ -41,16 +41,16 @@ ListItem.propTypes = {
   enableRipple: PropTypes.bool,
   hasError: PropTypes.bool,
   style: PropTypes.object
-}
+};
 
 ListItem.defaultProps = {
   children: null,
-  className: '',
+  className: "",
   arrow: false,
   onClick: event => {},
   enableRipple: false,
   hasError: false,
   style: {}
-}
+};
 
-export default ListItem
+export default ListItem;

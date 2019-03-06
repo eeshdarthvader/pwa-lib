@@ -1,6 +1,6 @@
 {
   "name": "pwa-lib",
-  "version": "0.2.6",
+  "version": "0.2.9",
   "main": "dist/bundled.js",
   "author": "Eesh Tyagi",
   "license": "MIT",

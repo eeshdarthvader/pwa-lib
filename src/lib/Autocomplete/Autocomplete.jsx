@@ -9,7 +9,7 @@ import SearchBar from '../Searchbar'
 import { SectionHeader } from '../Text'
 import Sheet from '../Sheet'
 import PageLoader from '../Pageloader'
-import Navigation from './navigation.svg'
+import {ReactComponent as Navigation} from './navigation.svg'
 
 class Autocomplete extends PureComponent {
   searchResultClassName = 'mt-20'
